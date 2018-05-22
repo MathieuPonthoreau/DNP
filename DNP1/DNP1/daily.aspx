@@ -50,7 +50,10 @@
             <form id="form1" runat="server">
                 <div>
                     <h1>Daily workout</h1>
-                    <p>Wich exercice ? : </p>
+                    <p>Wich exercice ? : 
+                        <asp:DropDownList ID="DropDownList1" runat="server">
+                        </asp:DropDownList>
+                    </p>
                 </div>
             </form>
             <!-- End row -->
