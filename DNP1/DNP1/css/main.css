@@ -1,0 +1,59 @@
+/*          RWD assignment 3
+Carton Samuel, Ponthoreau Mathieu, Mingot Estéban
+            2017-2018                           */
+body{
+    background-color: lightgrey;
+    font-family: 'open sans';
+}
+footer {
+    margin-top: 50px;
+}
+.jumbotron {
+    margin-top: 50px;
+}
+.banner{
+    background-image: url("images/banner.jpg");
+    background-size: cover;
+}
+.banner2 {
+    background-image: url("images/banner3.jpg");
+    background-size: cover;
+}
+.card{
+    width:350px;
+}
+.navbar-brand img{
+    width:80px;
+}
+/* Make the image fully responsive */
+.carousel-inner img 
+{
+    width: 100%;
+    height: 100%;
+}
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+.news {
+    width: auto;
+    height: 250px;
+    overflow: hidden;
+    font-size: 13px;
+    text-justify: inter-word;
+}
+.news img{
+    width:200px;
+}
+.padding-1{
+    padding-right:1px;
+    padding-left:1px;
+}
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.jump-down{
+    margin-top: 101px;
+}
+/*--------------------------------------------------------------------*/
