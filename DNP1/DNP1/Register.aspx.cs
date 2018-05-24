@@ -7,7 +7,6 @@ using System.Web.UI.WebControls;
 
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Data;
 
 public partial class Register : System.Web.UI.Page
 {
