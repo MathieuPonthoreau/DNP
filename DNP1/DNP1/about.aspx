@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="about.aspx.cs" Inherits="about" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <!DOCTYPE html>
 
@@ -40,6 +40,16 @@
     <div class="jumbotron jumbotron-fluid banner">
         <div class="container text-light">
             <h1>VIAFIT</h1>
+            <form id="form1" runat="server">
+                <div>    
+                    <asp:TextBox ID="TextBox1" runat="server" placeholder="Pseudo"></asp:TextBox>
+                    <br/>
+                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
+                    <br />
+                    <asp:Button ID="Button1" runat="server" Text="log in" OnClick="Button1_Click" />
+                    <asp:Label ID="Label1" runat="server" Text="Label" Visible ="false"></asp:Label>
+                </div>
+            </form>
             <p>DANMARKS STØRSTE FITNESSCENTER FOR ALLE</p>
         </div>
     </div>
