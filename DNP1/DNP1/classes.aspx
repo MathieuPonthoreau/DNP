@@ -71,6 +71,8 @@
                     <br />
                     <asp:Button ID="Button1" runat="server" Text="log in" OnClick="Button1_Click" />
                     <asp:Label ID="Label1" runat="server" Text="Label" Visible ="false"></asp:Label>
+                    <br />
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl ="~/Register.aspx">Register Here!</asp:HyperLink>
                 </div>
             </form>
             <p>DANMARKS STØRSTE FITNESSCENTER FOR ALLE</p>

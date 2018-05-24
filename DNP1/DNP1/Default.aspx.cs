@@ -15,16 +15,32 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        if(Session["Login"] != null)
+        {
+            
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["theConnection"].ConnectionString);
+            connection.Open();
+            SqlCommand getName = new SqlCommand("select firstName from [dbo].[User] where id = '"+ Session["Login"].ToString() + "'", connection);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(getName);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
 
+            string firstName = (string)getName.ExecuteScalar();
+
+            TextBox1.Visible = false;
+            TextBox2.Visible = false;
+            Button1.Visible = false;
+            HyperLink1.Visible = false;
+            Label1.Visible = true;
+            Label1.Text = "Hello "+firstName;
+        }
     }
 
     protected void Button1_Click(object sender, EventArgs e)
     {
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["theConnection"].ConnectionString);
         connection.Open();
-        SqlCommand command = new SqlCommand("select * from [dbo].[User] where pseudo =@pseudo and password =@password", connection);
-        command.Parameters.AddWithValue("@pseudo", TextBox1.Text);
-        command.Parameters.AddWithValue("@password", TextBox2.Text);
+        SqlCommand command = new SqlCommand("select id from [dbo].[User] where pseudo = '"+TextBox1.Text+ "' and password = '"+TextBox2.Text+"'", connection);
 
         SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
         DataTable dataTable = new DataTable();
@@ -32,7 +48,12 @@ public partial class _Default : System.Web.UI.Page
 
         if(dataTable.Rows.Count > 0)
         {
-            Response.Redirect("https://www.youtube.com/watch?v=P3ALwKeSEYs");
+            //Response.Redirect("https://www.youtube.com/watch?v=P3ALwKeSEYs");
+            int userId = (int)command.ExecuteScalar();
+            connection.Close();
+
+            Session["Login"] = userId;
+            Response.Redirect("Default.aspx");
         }
         else
         {
