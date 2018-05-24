@@ -47,6 +47,7 @@
                     <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
                     <br />
                     <asp:Button ID="Button1" runat="server" Text="log in" OnClick="Button1_Click" />
+                    <asp:Label ID="Label1" runat="server" Text="Label" Visible ="false"></asp:Label>
                 </div>
             </form>
             <p>DANMARKS STØRSTE FITNESSCENTER FOR ALLE</p>
