@@ -50,11 +50,28 @@
             <form id="form1" runat="server">
                 <div>
                     <h1>Daily workout</h1>
-                    <p>Wich exercice ? : 
-                        <asp:DropDownList ID="DropDownList1" runat="server">
+                    <p>Wich type of exercice : 
+                        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="type" DataValueField="type">
                         </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT DISTINCT type FROM exercise"></asp:SqlDataSource>
                     </p>
-                </div>
+
+                    <p>Wich exercice&nbsp; :
+                        <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="name">
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT name FROM exercise"></asp:SqlDataSource>
+                    </p>
+                    How many series :&nbsp;
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <br />
+                    How many repetitions :&nbsp;
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <br />
+                    How long :
+                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <br />
+                    <asp:Button ID="AddWorkout" runat="server" Text="Button" Onclick="saveWorkout"/>
+                    </div>
             </form>
             <!-- End row -->
         </div>
@@ -84,5 +101,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
