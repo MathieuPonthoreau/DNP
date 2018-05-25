@@ -33,6 +33,9 @@ public partial class _Default : System.Web.UI.Page
             HyperLink1.Visible = false;
             Label1.Visible = true;
             Label1.Text = "Hello "+firstName;
+            Button2.Visible = true;
+
+
         }
     }
 
@@ -48,7 +51,7 @@ public partial class _Default : System.Web.UI.Page
 
         if(dataTable.Rows.Count > 0)
         {
-            //Response.Redirect("https://www.youtube.com/watch?v=P3ALwKeSEYs");
+            
             int userId = (int)command.ExecuteScalar();
             connection.Close();
 
@@ -60,5 +63,11 @@ public partial class _Default : System.Web.UI.Page
             Label1.Visible = true;
             Label1.Text = "Wrong";
         }
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Session["Login"] = null;
+        Response.Redirect("Default.aspx");
     }
 }

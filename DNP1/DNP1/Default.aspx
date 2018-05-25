@@ -55,6 +55,7 @@
                     <asp:Label ID="Label1" runat="server" Text="Label" Visible ="false"></asp:Label>
                 <br />
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl ="~/Register.aspx">Register Here!</asp:HyperLink>
+                    <asp:Button ID="Button2" runat="server" Visible="false" Text="Log out" OnClick="Button2_Click" />
                 </div>
             </form>
             <p>DANMARKS STØRSTE FITNESSCENTER FOR ALLE</p>
