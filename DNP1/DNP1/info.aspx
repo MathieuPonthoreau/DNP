@@ -48,12 +48,32 @@
     <div class="container rounded shadow bg-light">
         <!-- Start 1st row -->
         <div class="row">
-            <form id="form1" runat="server">
-                <div>
-                    <h1>Monthly summary</h1>
-                    <p>Wich month do you want a summary ? : </p>
-                </div>
-            </form>
+            <div class="col-sm-10 offset-sm-1">
+                <form id="form1" runat="server">
+                    <div>
+                        <h1>Monthly summary</h1>
+                        <p>Wich month do you want a summary ? : 
+                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Send" />
+                        </p>
+                        <p>
+                            <asp:GridView ID="dataGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnLoad="Page_Load">
+                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                <EditRowStyle BackColor="#999999" />
+                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                            </asp:GridView>
+                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        </p>
+                    </div>
+                </form>
+            </div>
             <!-- End row -->
         </div>
     </div>
@@ -82,6 +102,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
 </body>
 </html>
