@@ -60,17 +60,18 @@
                         <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="name">
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT name FROM exercise"></asp:SqlDataSource>
+                    <p> (please enter integers) </p>
                     </p>
                     How many series :&nbsp;
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                    <br />
+                    &nbsp; (number of time you did the exercise)<br />
                     How many repetitions :&nbsp;
                     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                    <br />
+                    &nbsp;<br />
                     How long :
                     <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                    <br />
-                    <asp:Button ID="AddWorkout" runat="server" Text="Button" Onclick="saveWorkout"/>
+                    &nbsp;in minutes<br />
+                    <asp:Button ID="AddWorkout" runat="server" Text="Add Workout" Onclick="saveWorkout"/>
                     </div>
             </form>
             <!-- End row -->

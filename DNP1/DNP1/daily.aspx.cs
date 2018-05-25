@@ -15,18 +15,10 @@ public partial class daily : System.Web.UI.Page
     {
 		if (Session["Login"] != null)
         {
-            TextBox1.Visible = true;
-            TextBox2.Visible = true;
-            TextBox3.Visible = true;
-            //Button1.Visible = false;
-            //HyperLink1.Visible = false;
-            //Label1.Visible = true;
-            //Label1.Text = "Hello " + firstName;
-            //Button2.Visible = true;
         }
         else
         {
-
+            Response.Redirect("Login.aspx");
         }
     }
 
@@ -55,12 +47,12 @@ public partial class daily : System.Web.UI.Page
             dataAdapter.Fill(dataTable);
 
             int Id_Exercise = 1;
+            int calorie = 1;
 
             foreach (DataRow row in dataTable.Rows)
             {
                 Id_Exercise = Int32.Parse(row["id"].ToString());
-                string calorie = row["calorie"].ToString();
-                string type = row["type"].ToString();
+                calorie = Int32.Parse(row["calorie"].ToString());
             }
 
 
@@ -70,14 +62,15 @@ public partial class daily : System.Web.UI.Page
             int duration = Int32.Parse(TextBox3.Text);
 
             SqlCommand workout = new SqlCommand(
-                "insert into [dbo].[Workout] (date, Id_Exercise, Id_User, series, repetition,duration)values(GETDATE(),"+Id_Exercise+"," +Session["Login"]+"," + series + ", " + repetition + ", "+ duration +")"
+                "insert into [dbo].[Workout] (date, Id_Exercise, Id_User, series, repetition,duration,calories_burned)values(GETDATE()," + Id_Exercise+"," +Session["Login"]+"," + series + ", " + repetition + ", "+ duration + ", " + calorie*series*repetition + ")"
                 , connection);
 
             SqlDataReader sdr = workout.ExecuteReader();
+            Response.Redirect("info.aspx");
         }
         else
         {
-          
+            
         }
 
     }
