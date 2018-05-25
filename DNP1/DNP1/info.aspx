@@ -52,7 +52,14 @@
                 <form id="form1" runat="server">
                     <div>
                         <h1>Monthly summary</h1>
-                        <p>Wich month do you want a summary ? : 
+                        <p>
+                            Wich month do you want a summary ? : 
+                            <asp:DropDownList ID="DropDownList1" runat="server">
+                                <asp:ListItem>01</asp:ListItem>
+                                <asp:ListItem>02</asp:ListItem>
+                                <asp:ListItem>03</asp:ListItem>
+                                <asp:ListItem>06</asp:ListItem>
+                            </asp:DropDownList>
                             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Send" />
                         </p>
                         <p>

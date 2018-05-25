@@ -34,16 +34,11 @@ public partial class info : System.Web.UI.Page
                      "FROM workout INNER JOIN " +
                      "exercise ON workout.Id_Exercise = exercise.Id INNER JOIN " +
                      "[User] ON workout.Id_User = [User].Id " +
-                     "WHERE workout.Id_User = "+ Session["Login"] + " GROUP BY exercise.name", connection);
+                     "WHERE workout.Id_User = "+ Session["Login"] + " AND MONTH(workout.date) = "+ DropDownList1.SelectedItem.Text +  " GROUP BY exercise.name", connection);
         SqlDataAdapter sda = new SqlDataAdapter(command);
         DataTable dt = new DataTable();
         sda.Fill(dt);
         dataGridView.DataSource = dt;
         dataGridView.DataBind();
-    }
-
-    protected void Calendar1_SelectionChanged(object sender, EventArgs e)
-    {
-
     }
 }
