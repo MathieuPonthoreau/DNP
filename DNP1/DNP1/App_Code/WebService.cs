@@ -10,7 +10,7 @@ using System.Web.Services;
 /// <summary>
 /// Summary description for WebService
 /// </summary>
-[WebService(Namespace = "http://tempuri.org/")]
+[WebService(Namespace = "http://exemple.org/")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
 // [System.Web.Script.Services.ScriptService]
@@ -25,27 +25,47 @@ public class WebService : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public string HelloWorld()
-    {
-        return "Hello World";
-    }
-
-    [WebMethod]
     public List<string> getUser()
     {
         var liste = new List<string>();
-        for (int i = 1; i < 3; i++)
-        {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["theConnection"].ConnectionString);
-            connection.Open();
-            SqlCommand getName = new SqlCommand("select firstName from [dbo].[User] where id = "+i+"", connection);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(getName);
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["theConnection"].ConnectionString);
+        connection.Open();
+        SqlCommand getNumber = new SqlCommand("select MAX(id) from [dbo].[User] ", connection);
 
-            string firstName = (string)getName.ExecuteScalar();
-            liste.Add(firstName);
+
+        int totalUser = (int)getNumber.ExecuteScalar();
+
+        for (int i = 0; i <= totalUser; i++)
+        {
+
+
+            
+
+            SqlCommand getFirstName = new SqlCommand("select firstName from [dbo].[User] where id = " + i + "", connection);
+
+            string firstName = (string)getFirstName.ExecuteScalar();
+            if (firstName != null)
+            {
+                liste.Add(firstName);
+            }
+
+            SqlCommand getName = new SqlCommand("select lastName from [dbo].[User] where id = " + i + "", connection);
+
+            string lastName = (string)getName.ExecuteScalar();
+            if (lastName != null)
+            {
+                liste.Add(lastName);
+            }
+
+            SqlCommand getPseudo = new SqlCommand("select pseudo from [dbo].[User] where id = " + i + "", connection);
+
+            string pseudo = (string)getPseudo.ExecuteScalar();
+            if (pseudo != null)
+            {
+                liste.Add(pseudo);
+            }
         }
+        connection.Close();
         return liste;
     }
 }

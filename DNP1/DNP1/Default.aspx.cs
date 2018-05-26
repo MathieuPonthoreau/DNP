@@ -35,7 +35,12 @@ public partial class _Default : System.Web.UI.Page
             Label1.Text = "Hello "+firstName;
             Button2.Visible = true;
 
-
+            SqlCommand getlevel = new SqlCommand("select level from [dbo].[User] where id = '" + Session["Login"].ToString() + "'", connection);
+            int level = (int)getlevel.ExecuteScalar();
+            if (level == 2)
+            {
+                Button3.Visible = true;
+            }
         }
     }
 
