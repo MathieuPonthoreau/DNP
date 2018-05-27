@@ -50,6 +50,7 @@
             <div class="col-md-12 ">
                 <h2>Administration functions</h2>
                 <p>Display all User resgistered :</p>
+                <!-- Display Get User Web Service XML -->
                 <form runat="server" action="WebService.asmx/getUser" method="post" target="_blank">
                     <asp:Button ID="Button3" Visible="true" runat="server" Text="Get user list" />
                 </form>

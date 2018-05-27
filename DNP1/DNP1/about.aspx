@@ -40,7 +40,7 @@
     <div class="jumbotron jumbotron-fluid banner">
         <div class="container text-light">
             <h1>VIAFIT</h1>
-
+            <!-- Login Form -->
             <form id="form1" runat="server">
                 <div class="col-sm-3">
                 <div class ="form-group ">    
@@ -53,8 +53,10 @@
                 </div>
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl ="~/Register.aspx">Register Here!</asp:HyperLink>
                     <asp:Button ID="Button2" runat="server" Visible="false" Text="Log out" OnClick="Button2_Click" class="btn btn-default" />
-                    <asp:HyperLink ID="HyperLink2" Visible="false" runat="server" NavigateUrl ="~/admin.aspx">Admin acces</asp:HyperLink>
-                </div>
+                    <h3>
+                    <asp:HyperLink ID="HyperLink2" Visible="false" runat="server" NavigateUrl ="~/admin.aspx"  Class="text-danger font-weight-bold">Admin access</asp:HyperLink>
+                    </h3>
+                    </div>
             </form> 
            <br />
 

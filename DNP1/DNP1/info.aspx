@@ -49,11 +49,12 @@
         <!-- Start 1st row -->
         <div class="row">
             <div class="col-sm-10 offset-sm-1">
+                <!-- Admin functions -->
                 <form id="form1" runat="server">
                     <div>
                         <h1>Monthly summary</h1>
-                        <p>
-                            Wich month do you want a summary ? : 
+                        <p> Wich month do you want a summary ? : 
+                        <!-- Choose month from dropdown list  -->
                             <asp:DropDownList ID="DropDownListMonth" runat="server">
                                 <asp:ListItem>01</asp:ListItem>
                                 <asp:ListItem>02</asp:ListItem>
@@ -68,7 +69,8 @@
                                 <asp:ListItem>11</asp:ListItem>
                                 <asp:ListItem>12</asp:ListItem>
                             </asp:DropDownList>
-                        </p>
+                            </p>
+                        <!-- Choose year from dropdown list  -->
                         <p>
                             Wich Year ? :
                             <asp:DropDownList ID="DropDownListYear" runat="server">
@@ -76,6 +78,7 @@
                             
                         </p>
                         <p>
+                            <!-- Display result into a data grid   -->
                             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Send" />
                             
                         </p>

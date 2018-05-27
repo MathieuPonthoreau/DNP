@@ -53,7 +53,8 @@
                     <h1>Daily workout</h1>
                 <div class="form-group">
                     <p>Wich type of exercice : 
-                        <asp:DropDownList ID="DropDownList1" class="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="type" DataValueField="type" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True" >
+                         <!-- autopostback must be true to be able to call OnSelectedIndexChanged each time you select something  -->
+                        <asp:DropDownList ID="DropDownList1" class="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="type" DataValueField="type" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True" > 
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT DISTINCT type FROM exercise"></asp:SqlDataSource>
                     </p>
