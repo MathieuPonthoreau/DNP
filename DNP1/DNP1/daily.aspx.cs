@@ -78,7 +78,13 @@ public partial class daily : System.Web.UI.Page
                     , connection);
 
                 SqlDataReader sdr = workout.ExecuteReader();
-                Response.Redirect("daily.aspx");
+                
+                Label1.Visible = true;
+                Label1.Text = "Workout saved";
+                TextBox1.Text = "";
+                TextBox2.Text = "";
+                TextBox3.Text = "";
+
             }
         }
         else
