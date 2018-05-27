@@ -48,25 +48,21 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <form id="form1" runat="server">
-                    <div>
-                        <asp:TextBox ID="TextBoxRegisterFirstName" runat="server" placeholder="First name"></asp:TextBox>
-                        <br />
-                        <asp:TextBox ID="TextBoxRegisterLastName" runat="server" placeholder="Last Name"></asp:TextBox>
-                        <br />
-                        <asp:TextBox ID="TextBoxRegisterPseudo" runat="server" placeholder="Pseudonyme"></asp:TextBox>
-                        <br />
-                        <asp:TextBox ID="TextBoxRegisterPassword1" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
-                        <br />
-                        <asp:TextBox ID="TextBoxRegisterPassword2" runat="server" TextMode="Password" placeholder="Confirm Password"></asp:TextBox>
-                        <br />
-                        
-                            <asp:RadioButton GroupName="sex" ID="RadioButtonRegisterMale"  runat="server" Text ="Male"></asp:RadioButton>
-                            <asp:RadioButton GroupName="sex" ID="RadioButtonRegisterFemale"  runat="server" Text ="Female"></asp:RadioButton>
-
-                        <br />
-                        <asp:Button ID="ButtonRegister" runat="server" Text="Register" OnClick="ButtonRegister_Click" />
+                    <br />
+                    <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3" >
+                        <div class="form-group">
+                        <asp:TextBox ID="TextBoxRegisterFirstName" runat="server" placeholder="First name" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxRegisterLastName" runat="server" placeholder="Last Name" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxRegisterPseudo" runat="server" placeholder="Pseudonyme" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxRegisterPassword1" runat="server" TextMode="Password" placeholder="Password" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxRegisterPassword2" runat="server" TextMode="Password" placeholder="Confirm Password" class="form-control"></asp:TextBox>
+                        <asp:RadioButton GroupName="sex" ID="RadioButtonRegisterMale"  runat="server" Text ="Male"></asp:RadioButton>
+                        <asp:RadioButton GroupName="sex" ID="RadioButtonRegisterFemale"  runat="server" Text ="Female"></asp:RadioButton>
+                        </div>
+                        <asp:Button ID="ButtonRegister" runat="server" Text="Register" OnClick="ButtonRegister_Click" class="btn btn-default" />
                         <asp:Label ID="Label1" runat="server" Text="Label" Visible="false"></asp:Label>
                     </div>
+                    <br />
                 </form>
             </div>
         </div>

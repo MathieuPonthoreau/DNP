@@ -39,28 +39,25 @@
     <!-- Banner -->
     <div class="jumbotron jumbotron-fluid banner">
         <div class="container text-light">
-           <h1>VIAFIT
-                </h1>
-            <br />
+           <h1>VIAFIT</h1>
+          
 
-            <form id="form1" runat="server">
-            
-                <div> 
-                    
-                    <asp:TextBox ID="TextBox1" runat="server" placeholder="Pseudo"></asp:TextBox>
-                    <br/>
-                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
-                    <br />
-                    <asp:Button ID="Button1" runat="server" Text="log in" OnClick="Button1_Click" />
-                    <asp:Label ID="Label1" runat="server" Text="Label" Visible ="false"></asp:Label>
-                <br />
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl ="~/Register.aspx">Register Here!</asp:HyperLink>
-                    <asp:Button ID="Button2" runat="server" Visible="false" Text="Log out" OnClick="Button2_Click" />
-                    <br />
-                    <asp:HyperLink ID="HyperLink2" Visible="false" runat="server" NavigateUrl ="~/admin.aspx">Admin acces</asp:HyperLink>
-
+           <form id="form1" runat="server">
+                <div class="col-sm-3">
+                <div class ="form-group ">    
+                    <asp:TextBox ID="TextBox1" runat="server" placeholder="Pseudo" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" placeholder="Password" class="form-control"></asp:TextBox>
                 </div>
-            </form>
+                <div class="form-group">
+                    <asp:Button ID="Button1" runat="server" Text="log in" OnClick="Button1_Click" class="btn btn-default" />
+                    <asp:Label ID="Label1" runat="server" Text="Label" Visible ="false"></asp:Label>
+                </div>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl ="~/Register.aspx">Register Here!</asp:HyperLink>
+                    <asp:Button ID="Button2" runat="server" Visible="false" Text="Log out" OnClick="Button2_Click" class="btn btn-default" />
+                    <asp:HyperLink ID="HyperLink2" Visible="false" runat="server" NavigateUrl ="~/admin.aspx">Admin acces</asp:HyperLink>
+                </div>
+            </form> 
+           <br />
             
             <p>DANMARKS STØRSTE FITNESSCENTER FOR ALLE</p>
         </div>
