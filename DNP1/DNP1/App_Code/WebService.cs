@@ -38,15 +38,12 @@ public class WebService : System.Web.Services.WebService
         for (int i = 0; i <= totalUser; i++)
         {
 
-
-            
-
             SqlCommand getFirstName = new SqlCommand("select firstName from [dbo].[User] where id = " + i + "", connection);
 
             string firstName = (string)getFirstName.ExecuteScalar();
             if (firstName != null)
             {
-                liste.Add(firstName);
+                liste.Add("First name : "+firstName);
             }
 
             SqlCommand getName = new SqlCommand("select lastName from [dbo].[User] where id = " + i + "", connection);
@@ -54,7 +51,7 @@ public class WebService : System.Web.Services.WebService
             string lastName = (string)getName.ExecuteScalar();
             if (lastName != null)
             {
-                liste.Add(lastName);
+                liste.Add("Last name : " + lastName);
             }
 
             SqlCommand getPseudo = new SqlCommand("select pseudo from [dbo].[User] where id = " + i + "", connection);
@@ -62,7 +59,7 @@ public class WebService : System.Web.Services.WebService
             string pseudo = (string)getPseudo.ExecuteScalar();
             if (pseudo != null)
             {
-                liste.Add(pseudo);
+                liste.Add("Pseudo : " + pseudo);
             }
         }
         connection.Close();
