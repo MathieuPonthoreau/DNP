@@ -40,10 +40,6 @@
     <div class="jumbotron jumbotron-fluid banner">
         <div class="container text-light">
             <h1>VIAFIT</h1>
-            <form runat="server" action="WebService.asmx/getUser" method="post" target="_blank">
-                <asp:Button ID="Button3" Visible="true" runat="server" Text="Get user list" />
-
-            </form>
             <p>DANMARKS STØRSTE FITNESSCENTER FOR ALLE</p>
         </div>
     </div>
@@ -51,23 +47,13 @@
     <div class="container rounded shadow bg-light">
         <!-- 1st row -->
         <div class="row">
-            <div class="col-md-12 text-center">
-                <img class="img-fluid rounded shadow jump-down" src="images/open247.png" alt="open 24/7">
-                <br>
-                <br>
-                <br>
-                <h2 class="bg-secondary text-light">Information</h2>
-            </div>
-            <div class="col-md-6">
-                <p>
-                    We offer nothing but the best. Enjoy our luxurious locations conveniently located throughout SoCal. Our 6 Star Facilities are elegant in design with luxurious finishes, spa areas with sauna and steam room and jacuzzi, swimming pools, and exceptional classes. We provide state of the art equipment from Life Fitness, Matrix, Freemotion, Hoist and Precor.
-                </p>
-                <p>
-                    Try before you sign. Enjoy any one of our premium facilities for FREE, no signup required! Our one-day guest pass offers the flexibility to explore anyone of our luxury clubs on your terms.
-                </p>
-            </div>
-            <div class="col-md-6">
-                <img class="img-fluid rounded shadow " src="images/about.jpg" alt="fitness room">
+            <div class="col-md-12 ">
+                <h2>Administration functions</h2>
+                <p>Display all User resgistered :</p>
+                <form runat="server" action="WebService.asmx/getUser" method="post" target="_blank">
+                    <asp:Button ID="Button3" Visible="true" runat="server" Text="Get user list" />
+                </form>
+                <br />
             </div>
         </div>
     </div>
