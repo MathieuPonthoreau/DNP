@@ -54,13 +54,30 @@
                         <h1>Monthly summary</h1>
                         <p>
                             Wich month do you want a summary ? : 
-                            <asp:DropDownList ID="DropDownList1" runat="server">
+                            <asp:DropDownList ID="DropDownListMonth" runat="server">
                                 <asp:ListItem>01</asp:ListItem>
                                 <asp:ListItem>02</asp:ListItem>
                                 <asp:ListItem>03</asp:ListItem>
+                                <asp:ListItem>04</asp:ListItem>
+                                <asp:ListItem>05</asp:ListItem>
                                 <asp:ListItem>06</asp:ListItem>
+                                <asp:ListItem>07</asp:ListItem>
+                                <asp:ListItem>08</asp:ListItem>
+                                <asp:ListItem>09</asp:ListItem>
+                                <asp:ListItem>10</asp:ListItem>
+                                <asp:ListItem>11</asp:ListItem>
+                                <asp:ListItem>12</asp:ListItem>
                             </asp:DropDownList>
+                        </p>
+                        <p>
+                            Wich Year ? :
+                            <asp:DropDownList ID="DropDownListYear" runat="server">
+                            </asp:DropDownList>
+                            
+                        </p>
+                        <p>
                             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Send" />
+                            
                         </p>
                         <p>
                             <asp:GridView ID="dataGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnLoad="Page_Load">
@@ -76,7 +93,9 @@
                                 <SortedDescendingCellStyle BackColor="#FFFDF8" />
                                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                             </asp:GridView>
-                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        </p>
+                        <p>
+                            <asp:Label ID="Label1" runat="server" Text=" "></asp:Label>
                         </p>
                     </div>
                 </form>
