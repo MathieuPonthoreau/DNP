@@ -1,0 +1,25 @@
+DNP1 project spring 2018 
+by Samuel Carton
+Estéban Mingot
+Mathieu Ponthoreau
+
+/------------------------------------------------------------/
+We chose the project Via-Fitness
+
+We already create some users for you to test our application
+the login for admin is : admin
+and the password is : admin
+
+the login for a user with some data is : User1
+and the password is : user
+
+the login for an emptie user is : User2
+and the password is : user
+
+/------------------------------------------------------------/
+-You can create a new user on the page register
+-You can login or logout on all the normal pages
+-You can add your workout on the page daily
+-You can get a monthly summary on the page info
+-You can access the web service by clicking on the red admin access link
+when you are login as an admin
