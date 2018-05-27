@@ -52,14 +52,12 @@
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl ="~/Register.aspx">Register Here!</asp:HyperLink>
                      <asp:Button ID="Button2" runat="server" Visible="false" Text="Log out" OnClick="Button2_Click" />
                     <br />
-                    
+                    <asp:HyperLink ID="HyperLink2" Visible="false" runat="server" NavigateUrl ="~/admin.aspx">Admin acces</asp:HyperLink>
+
                 </div>
             </form>
             
-            <form runat="server" action="WebService.asmx/getUser" method="post" target="_blank">
-                <asp:Button ID="Button3" Visible="false" runat="server" Text="Get user list" />
-
-            </form>
+            
             <p>DANMARKS STØRSTE FITNESSCENTER FOR ALLE</p>
         </div>
     </div>

@@ -39,7 +39,7 @@ public partial class _Default : System.Web.UI.Page
             int level = (int)getlevel.ExecuteScalar();
             if (level == 2)
             {
-                Button3.Visible = true;
+                HyperLink2.Visible = true;
             }
         }
     }
