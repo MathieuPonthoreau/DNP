@@ -47,34 +47,46 @@
     <div class="container rounded shadow bg-light">
         <!-- Start 1st row -->
         <div class="row">
+            <div class="col-sm-6 offset-sm-3 col-lg-4 offset-lg-4">
             <form id="form1" runat="server">
-                <div>
+                
                     <h1>Daily workout</h1>
+                <div class="form-group">
                     <p>Wich type of exercice : 
-                        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="type" DataValueField="type" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True" >
+                        <asp:DropDownList ID="DropDownList1" class="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="type" DataValueField="type" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True" >
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT DISTINCT type FROM exercise"></asp:SqlDataSource>
                     </p>
-
+                    </div>
+                <div class="form-group">
                     <p>Wich exercice&nbsp; :
-                        <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="name">
+                        <asp:DropDownList ID="DropDownList2" class="form-control" runat="server" DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="name">
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT name FROM exercise"></asp:SqlDataSource>
-                    
                     </p>
-                    How many series :&nbsp;
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                    &nbsp; (number of time you did the exercise)<br />
-                    How many repetitions :&nbsp;
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                    &nbsp;<br />
-                    How long :
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                    &nbsp;in minutes<br />
-                    <asp:Button ID="AddWorkout" runat="server" Text="Add Workout" Onclick="saveWorkout"/>
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                     </div>
+                <div class="form-group">
+                    How many series :&nbsp;
+                    <asp:TextBox ID="TextBox1" class="form-control" runat="server"></asp:TextBox>
+                                       &nbsp; (number of time you did the exercise)<br />
+                     </div>
+                        <div class="form-group">
+                    How many repetitions :&nbsp;
+                    <asp:TextBox ID="TextBox2" class="form-control" runat="server"></asp:TextBox>
+                    
+                        </div>
+                        <div class="form-group">
+                    How long :
+                    <asp:TextBox ID="TextBox3" class="form-control" runat="server"></asp:TextBox>
+                    &nbsp;in minutes
+
+                            </div>
+                    <asp:Button ID="AddWorkout" class="btn btn-default" runat="server" Text="Add Workout" Onclick="saveWorkout"/>
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <br />
+                    
             </form>
+                </div>
             <!-- End row -->
         </div>
     </div>
