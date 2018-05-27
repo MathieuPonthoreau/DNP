@@ -72,6 +72,7 @@
                     <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                     &nbsp;in minutes<br />
                     <asp:Button ID="AddWorkout" runat="server" Text="Add Workout" Onclick="saveWorkout"/>
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                     </div>
             </form>
             <!-- End row -->

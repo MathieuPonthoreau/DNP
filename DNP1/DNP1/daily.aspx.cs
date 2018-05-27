@@ -16,6 +16,8 @@ public partial class daily : System.Web.UI.Page
 		if (Session["Login"] != null)
         {
             SqlDataSource2.SelectCommand = "SELECT name FROM exercise where exercise.type ='cardio'";
+
+            Label1.Visible = false;
         }
         else
         {
@@ -34,7 +36,9 @@ public partial class daily : System.Web.UI.Page
         {
             if (!Int32.TryParse(TextBox1.Text, out int result) || !Int32.TryParse(TextBox2.Text, out int result2) || !Int32.TryParse(TextBox3.Text, out int result3) )
             {
-                Response.Redirect("daily.aspx");
+                //Please only use intergers
+                Label1.Visible = true;
+                Label1.Text = "Please only use intergers";
             }
             else
             {
@@ -74,12 +78,14 @@ public partial class daily : System.Web.UI.Page
                     , connection);
 
                 SqlDataReader sdr = workout.ExecuteReader();
-                Response.Redirect("info.aspx");
+                Response.Redirect("daily.aspx");
             }
         }
         else
         {
-            Response.Redirect("daily.aspx");
+            //fill all of the parametters
+            Label1.Visible = true;
+            Label1.Text = "fill all of the parametters";
         }
 
     }
