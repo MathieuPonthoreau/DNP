@@ -21,10 +21,7 @@ public partial class _Default : System.Web.UI.Page
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["theConnection"].ConnectionString);
             connection.Open();
             SqlCommand getName = new SqlCommand("select firstName from [dbo].[User] where id = '"+ Session["Login"].ToString() + "'", connection);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(getName);
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-
+            
             string firstName = (string)getName.ExecuteScalar();
 
             TextBox1.Visible = false;
@@ -58,7 +55,7 @@ public partial class _Default : System.Web.UI.Page
         {
             
             int userId = (int)command.ExecuteScalar();
-            connection.Close();
+            
 
             Session["Login"] = userId;
             Response.Redirect("Default.aspx");
@@ -67,6 +64,7 @@ public partial class _Default : System.Web.UI.Page
         {
             Label1.Visible = true;
             Label1.Text = "Wrong";
+            
         }
     }
 

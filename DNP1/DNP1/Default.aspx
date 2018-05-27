@@ -53,8 +53,11 @@
                     <asp:Label ID="Label1" runat="server" Text="Label" Visible ="false"></asp:Label>
                 </div>
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl ="~/Register.aspx">Register Here!</asp:HyperLink>
+                    <h3>
                     <asp:Button ID="Button2" runat="server" Visible="false" Text="Log out" OnClick="Button2_Click" class="btn btn-default" />
-                    <asp:HyperLink ID="HyperLink2" Visible="false" runat="server" NavigateUrl ="~/admin.aspx">Admin acces</asp:HyperLink>
+                    
+                    <asp:HyperLink ID="HyperLink2" Visible="false" runat="server" NavigateUrl ="~/admin.aspx" Class="text-danger font-weight-bold">Admin acces</asp:HyperLink>
+                    </h3>
                 </div>
             </form> 
            <br />
