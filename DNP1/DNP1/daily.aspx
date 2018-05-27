@@ -60,7 +60,7 @@
                         <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="name">
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT name FROM exercise"></asp:SqlDataSource>
-                    <p> (please enter integers) </p>
+                    
                     </p>
                     How many series :&nbsp;
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
