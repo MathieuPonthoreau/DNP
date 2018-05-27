@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="admin.aspx.cs" Inherits="admin" %>
 
 <!DOCTYPE html>
 
@@ -40,23 +40,6 @@
     <div class="jumbotron jumbotron-fluid banner">
         <div class="container text-light">
             <h1>VIAFIT</h1>
-            <form id="form1" runat="server">
-                <div>    
-                    <asp:TextBox ID="TextBox1" runat="server" placeholder="Pseudo"></asp:TextBox>
-                    <br/>
-                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
-                    <br />
-                    <asp:Button ID="Button1" runat="server" Text="log in" OnClick="Button1_Click" />
-                    <asp:Label ID="Label1" runat="server" Text="Label" Visible ="false"></asp:Label>
-                    <br />
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl ="~/Register.aspx">Register Here!</asp:HyperLink>
-                    <asp:Button ID="Button2" runat="server" Visible="false" Text="Log out" OnClick="Button2_Click" />
-                    <br />
-                    <asp:HyperLink ID="HyperLink2" Visible="false" runat="server" NavigateUrl ="~/admin.aspx">Admin acces</asp:HyperLink>
-                </div>
-            </form>
-            
-           
             <p>DANMARKS STØRSTE FITNESSCENTER FOR ALLE</p>
         </div>
     </div>
@@ -64,24 +47,14 @@
     <div class="container rounded shadow bg-light">
         <!-- 1st row -->
         <div class="row">
-            <div class="col-md-12 text-center">
-                <img class="img-fluid rounded shadow jump-down" src="images/open247.png" alt="open 24/7">
-                <br>
-                <br>
-                <br>
-                <h2 class="bg-secondary text-light">Information</h2>
+            <div class="col-md-12 ">
+                <h1>Administration functions :</h1>
+                <p>Display all registered User : </p>
+                <form runat="server" action="WebService.asmx/getUser" method="post" target="_blank">
+                <asp:Button ID="Button3" Visible="true" runat="server" Text="Get user list" />
+            </form>
             </div>
-            <div class="col-md-6">
-                <p>
-                    We offer nothing but the best. Enjoy our luxurious locations conveniently located throughout SoCal. Our 6 Star Facilities are elegant in design with luxurious finishes, spa areas with sauna and steam room and jacuzzi, swimming pools, and exceptional classes. We provide state of the art equipment from Life Fitness, Matrix, Freemotion, Hoist and Precor.
-                </p>
-                <p>
-                    Try before you sign. Enjoy any one of our premium facilities for FREE, no signup required! Our one-day guest pass offers the flexibility to explore anyone of our luxury clubs on your terms.
-                </p>
-            </div>
-            <div class="col-md-6">
-                <img class="img-fluid rounded shadow " src="images/about.jpg" alt="fitness room">
-            </div>
+            
         </div>
     </div>
     <footer>
