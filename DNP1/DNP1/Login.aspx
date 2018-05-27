@@ -40,6 +40,7 @@
     <div class="jumbotron jumbotron-fluid banner">
         <div class="container text-light">
             <h1>VIAFIT</h1>
+            <!-- Login form -->
            <form id="form1" runat="server">
                 <div class="col-sm-3">
                 <div class ="form-group ">    

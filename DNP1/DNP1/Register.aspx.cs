@@ -20,7 +20,7 @@ public partial class Register : System.Web.UI.Page
     {
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["theConnection"].ConnectionString);
         connection.Open();
-
+        //verify data
         SqlCommand speudoUnique = new SqlCommand("select * from [dbo].[User] where pseudo = '" + TextBoxRegisterPseudo.Text + "'", connection);
         if (
             TextBoxRegisterFirstName.Text.Length != 0
@@ -32,6 +32,7 @@ public partial class Register : System.Web.UI.Page
 
             )
         {
+            //verify if the login is already taken
             SqlDataAdapter dataAdapter = new SqlDataAdapter(speudoUnique);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
@@ -49,20 +50,18 @@ public partial class Register : System.Web.UI.Page
                 {
                     sex = "F";
                 }
-
+                //create the user
                 SqlCommand registration = new SqlCommand(
                     "insert into [dbo].[User] (firstName, lastName, pseudo, password, sex)values('" + TextBoxRegisterFirstName.Text + "', '" + TextBoxRegisterLastName.Text + "', '" + TextBoxRegisterPseudo.Text + "','" + TextBoxRegisterPassword1.Text + "', '" + sex + "')"
                     , connection);
 
                 SqlDataReader sdr = registration.ExecuteReader();
-                connection.Close();
-
-             
-                connection.Open();
+                
                 SqlCommand command = new SqlCommand("select id from [dbo].[User] where pseudo = '" + TextBoxRegisterPseudo.Text + "' and password = '" + TextBoxRegisterPassword1.Text + "'", connection);
-                SqlDataAdapter dataAdapter2 = new SqlDataAdapter(command);
-                DataTable dataTable2 = new DataTable();
-                dataAdapter2.Fill(dataTable2);
+                connection.Close();
+                connection.Open();
+
+                //log the new user
                 int userId = (int)command.ExecuteScalar();
                 connection.Close();
                 Session["Login"] = userId;
