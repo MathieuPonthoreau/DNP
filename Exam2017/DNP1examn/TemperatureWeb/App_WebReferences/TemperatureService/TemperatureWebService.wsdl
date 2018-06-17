@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ConvertToCelsius">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="temperatureF" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertToCelsiusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConvertToCelsiusResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertToFahrenheit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="temperatureC" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertToFahrenheitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConvertToFahrenheitResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConvertToCelsiusSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertToCelsius" />
+  </wsdl:message>
+  <wsdl:message name="ConvertToCelsiusSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertToCelsiusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertToFahrenheitSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertToFahrenheit" />
+  </wsdl:message>
+  <wsdl:message name="ConvertToFahrenheitSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertToFahrenheitResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TemperatureWebServiceSoap">
+    <wsdl:operation name="ConvertToCelsius">
+      <wsdl:input message="tns:ConvertToCelsiusSoapIn" />
+      <wsdl:output message="tns:ConvertToCelsiusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToFahrenheit">
+      <wsdl:input message="tns:ConvertToFahrenheitSoapIn" />
+      <wsdl:output message="tns:ConvertToFahrenheitSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TemperatureWebServiceSoap" type="tns:TemperatureWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConvertToCelsius">
+      <soap:operation soapAction="http://tempuri.org/ConvertToCelsius" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToFahrenheit">
+      <soap:operation soapAction="http://tempuri.org/ConvertToFahrenheit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TemperatureWebServiceSoap12" type="tns:TemperatureWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConvertToCelsius">
+      <soap12:operation soapAction="http://tempuri.org/ConvertToCelsius" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToFahrenheit">
+      <soap12:operation soapAction="http://tempuri.org/ConvertToFahrenheit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TemperatureWebService">
+    <wsdl:port name="TemperatureWebServiceSoap" binding="tns:TemperatureWebServiceSoap">
+      <soap:address location="http://localhost:59224/TemperatureWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TemperatureWebServiceSoap12" binding="tns:TemperatureWebServiceSoap12">
+      <soap12:address location="http://localhost:59224/TemperatureWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,6 @@
+C:\Users\silve\Desktop\DNP1examn\TemperatureConverter\bin\Debug\TemperatureConverter.dll
+C:\Users\silve\Desktop\DNP1examn\TemperatureConverter\bin\Debug\TemperatureConverter.pdb
+C:\Users\silve\Desktop\DNP1examn\TemperatureConverter\obj\Debug\TemperatureConverter.csprojAssemblyReference.cache
+C:\Users\silve\Desktop\DNP1examn\TemperatureConverter\obj\Debug\TemperatureConverter.csproj.CoreCompileInputs.cache
+C:\Users\silve\Desktop\DNP1examn\TemperatureConverter\obj\Debug\TemperatureConverter.dll
+C:\Users\silve\Desktop\DNP1examn\TemperatureConverter\obj\Debug\TemperatureConverter.pdb

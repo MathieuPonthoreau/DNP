@@ -1,0 +1,13 @@
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\bin\Debug\WindowsFormsTempConverter.exe.config
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\bin\Debug\WindowsFormsTempConverter.exe
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\bin\Debug\WindowsFormsTempConverter.pdb
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\bin\Debug\TemperatureConverter.dll
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\bin\Debug\TemperatureConverter.pdb
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\obj\Debug\WindowsFormsTempConverter.csprojAssemblyReference.cache
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\obj\Debug\WindowsFormsTempConverter.Form1.resources
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\obj\Debug\WindowsFormsTempConverter.Properties.Resources.resources
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\obj\Debug\WindowsFormsTempConverter.csproj.GenerateResource.cache
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\obj\Debug\WindowsFormsTempConverter.csproj.CoreCompileInputs.cache
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\obj\Debug\WindowsFormsTempConverter.csproj.CopyComplete
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\obj\Debug\WindowsFormsTempConverter.exe
+C:\Users\silve\Desktop\DNP1examn\WindowsFormsTempConverter\obj\Debug\WindowsFormsTempConverter.pdb
